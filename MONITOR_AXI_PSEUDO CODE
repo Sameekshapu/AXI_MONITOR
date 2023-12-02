@@ -44,56 +44,61 @@
 //--------------------------------------------------------------------------------------------
 // Construct: new
 //
-// Parameters:
+// Parameters: read address analysis port
+               read data analysis port
+               write address analysis port
+               write data analysis port
+               write response analysis port
+               write address fifo
+               write data fifo
+               read fifo
 // name - axi4_master_monitor
 // parent - parent under which this component is created
 //--------------------------------------------------------------------------------------------
 
-// //--------------------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------------
 // Function: build_phase
-//
-// Parameters:
+// Description : super.build phase( ) called first to execute build phase function in the base class
 // phase - uvm phase
 //--------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------
 // Function: connect_phase
-// <Description_here>
-//
-// Parameters:
-//  phase - uvm phase
+// Description: extending coonect phase method in axi4_master_monitor class by calling same method in 
+// the super class
+// Parameters: axi4_master_monitor
+// phase - uvm phase
 //--------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------
+// Description: This is the function in axi4_master_monitor class. It initially calls same method in its 
+// super class and then establishes a connection by setting property inanother object.
 // Function: end_of_elaboration_phase
-// <Description_here>
-//
-// Parameters:
-//  phase - uvm phase
+// phase - uvm phase
 //--------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------
 // Task: run_phase
-// 
-// Parameters:
-//  phase - uvm phase
+// Description : Waits for reset to get asserted. Once the write address,write data, write response, 
+// read address,read data executes,comes out of fork join thread and ends the task
+// phase - uvm phase
 //--------------------------------------------------------------------------------------------
 
 //--------------------------------------------------------------------------------------------
 // Task: axi4_write_address
-//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+// Gets the struct packet samples the data, convert it to req and drives to analysis port
 //--------------------------------------------------------------------------------------------
 
 // Clone and publish the cloned item to the subscribers
 
 //--------------------------------------------------------------------------------------------
 // Task: axi4_write_data
-//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+// Gets the struct packet samples the data, convert it to req and drives to analysis port
 //--------------------------------------------------------------------------------------------
 
-//Getting the write address packet
+// Getting the write address packet
 
-//Combining write address and write data packets
+// Combining write address and write data packets
 
 // Clone and publish the cloned item to the subscribers
 
@@ -102,24 +107,24 @@
 // Gets the struct packet samples the data, convert it to req and drives to analysis port
 //--------------------------------------------------------------------------------------------
 
-//Getting the write address packet
+// Getting the write address packet
 
-//Combining write address and write data packets
+// Combining write address and write data packets
 
-//clone and publish the clone to the analysis port 
+// clone and publish the clone to the analysis port 
 
 //--------------------------------------------------------------------------------------------
 // Task: axi4_read_address
-//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+// Gets the struct packet samples the data, convert it to req and drives to analysis port
 //--------------------------------------------------------------------------------------------
 
-//clone and publish the clone to the analysis port
+// clone and publish the clone to the analysis port
 
 //--------------------------------------------------------------------------------------------
 // Task: axi4_read_data
-//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+// Gets the struct packet samples the data, convert it to req and drives to analysis port
 //--------------------------------------------------------------------------------------------
 
-//clone and publish the clone to the analysis port 
+// clone and publish the clone to the analysis port 
 
 
