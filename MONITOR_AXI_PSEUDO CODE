@@ -1,0 +1,125 @@
+// define `ifndef and `define 
+
+//  Class: axi4_master_monitor
+
+//  Monitor is written by extending uvm_monitor,uvm_monitor is inherited from uvm_component, 
+//  A monitor is a passive entity that samples the DUT signals through virtual interface and 
+//  converts the signal level activity to transaction level,monitor samples DUT signals but cannot drive them.
+//  Monitor should have analysis port (TLM port) and virtual interface handle that points to DUT signal
+//--------------------------------------------------------------------------------------------
+
+// Variable: axi4_master_agent_cfg_h
+// Declaring handle for axi4_master agent config class 
+
+// Declaring handles for master transaction
+
+// Variable : apb_master_mon
+// Declaring handle for apb monitor 
+
+// Declaring analysis port for the monitor port
+
+// variable: axi4_master_mon_h
+// declaring handle for axi4 master monitor
+
+// declaring analysis port monitor port for 
+// analysis_port for read address
+// analysis_port for read data
+// analysis_port for write address
+// analysis_port for write data
+// analysis_port for write response
+
+// Variable: axi4_master_write_address_fifo_h
+// Declaring handle for uvm_tlm_analysis_fifo for write task
+
+// Variable: axi4_master_write_data_fifo_h
+// Declaring handle for uvm_tlm_analysis_fifo for write task
+
+// Variable: axi4_master_read_fifo_h
+// Declaring handle for uvm_tlm_analysis_fifo for read task
+
+//-------------------------------------------------------
+// Externally defined Tasks and Functions
+//-------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// Construct: new
+//
+// Parameters:
+// name - axi4_master_monitor
+// parent - parent under which this component is created
+//--------------------------------------------------------------------------------------------
+
+// //--------------------------------------------------------------------------------------------
+// Function: build_phase
+//
+// Parameters:
+// phase - uvm phase
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// Function: connect_phase
+// <Description_here>
+//
+// Parameters:
+//  phase - uvm phase
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// Function: end_of_elaboration_phase
+// <Description_here>
+//
+// Parameters:
+//  phase - uvm phase
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// Task: run_phase
+// 
+// Parameters:
+//  phase - uvm phase
+//--------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------------
+// Task: axi4_write_address
+//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+//--------------------------------------------------------------------------------------------
+
+// Clone and publish the cloned item to the subscribers
+
+//--------------------------------------------------------------------------------------------
+// Task: axi4_write_data
+//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+//--------------------------------------------------------------------------------------------
+
+//Getting the write address packet
+
+//Combining write address and write data packets
+
+// Clone and publish the cloned item to the subscribers
+
+//--------------------------------------------------------------------------------------------
+// Task: axi4_write_response
+// Gets the struct packet samples the data, convert it to req and drives to analysis port
+//--------------------------------------------------------------------------------------------
+
+//Getting the write address packet
+
+//Combining write address and write data packets
+
+//clone and publish the clone to the analysis port 
+
+//--------------------------------------------------------------------------------------------
+// Task: axi4_read_address
+//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+//--------------------------------------------------------------------------------------------
+
+//clone and publish the clone to the analysis port
+
+//--------------------------------------------------------------------------------------------
+// Task: axi4_read_data
+//  Gets the struct packet samples the data, convert it to req and drives to analysis port
+//--------------------------------------------------------------------------------------------
+
+//clone and publish the clone to the analysis port 
+
+
